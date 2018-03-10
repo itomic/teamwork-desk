@@ -9,23 +9,19 @@ This is a simple PHP Client that can connect to the [TeamworkDesk](http://www.te
 
 This fork also includes updates for laravel 5.5 and 5.6
 
-## Origional
-
-Laravel 5 TeamworkDesk PM API Bridge http://rossedman.github.io/teamwork/
-
 
 ## Installation
 
 Just add this to your `composer.json` and then run `composer update`.
 
 ```
-"nigelheap/teamwork": "~5.5"
+"nigelheap/teamwork-desk": "~1.0.*"
 ```
 
 You can also simply add it like this
 
 ```
-composer require "nigelheap/teamwork:~5.5"
+composer require "nigelheap/teamwork-desk:~1.0.*"
 ```
 
 ## Laravel Setup
@@ -72,7 +68,7 @@ If you want to use dependency injection to make your application easy to test th
 
 ```php
 Route::get('/test', function(NigelHeap\TeamworkDesk\Factory $teamwork) {
-   $activity = $teamwork->activity()->latest();
+   $customers = $teamwork->customers()->all();
 });
 ```
 
@@ -99,18 +95,12 @@ You are ready to go now!
 
 Not all of the TeamworkDesk API is supported yet but there is still a lot you can do! Below are some examples of how you can access Projects, Companies, and more. To work with a specific Object pass in the ID to perform actions on it. Data can be passed through for creating and editing.
 
-**To see more examples [visit the docs](http://nigelheap.github.io/teamwork/)**
+**To see more examples [visit the docs](http://nigelheap.github.io/teamwork-desk/)**
 
 ```php
-// create a project
-$teamwork->project()->create([
-    "name" => "My New Amazing Project",
-    "description" => "This is a project that I will dedicate my whole life too",
-    "companyId" => "999"
-]);
 
 // get the latest activity on a project
-$teamwork->project($projectID)->activity();
+$teamwork->customers($customerId)->find();
 ```
 
 ## Roadmap

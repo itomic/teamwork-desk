@@ -15,13 +15,13 @@ This fork also includes updates for laravel 5.5 and 5.6
 Just add this to your `composer.json` and then run `composer update`.
 
 ```
-"nigelheap/teamwork-desk": "~1.0.*"
+"nigelheap/teamwork-desk": "1.0.*"
 ```
 
 You can also simply add it like this
 
 ```
-composer require "nigelheap/teamwork-desk:~1.0.*"
+composer require "nigelheap/teamwork-desk:1.0.*"
 ```
 
 ## Laravel Setup

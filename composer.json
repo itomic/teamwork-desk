@@ -1,0 +1,43 @@
+{
+    "name": "nigelheap/teamwork-desk",
+    "description": "PHP wrapper for the Teamwork desk API",
+    "keywords": ["teamwork", "api", "laravel", "teamwork desk"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Edman",
+            "email": "ross.edman@gmail.com"
+        },
+        {
+            "name": "Nigel Heap",
+            "email": "nigel@nigelheap.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "~6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5",
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NigelHeap\\TeamworkDesk\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NigelHeap\\TeamworkDesk\\TeamworkDeskServiceProvider"
+            ],
+            "aliases": {
+                "TeamworkDesk": "NigelHeap\\TeamworkDesk\\Facades\\TeamworkDesk"
+            }
+        }
+    },
+    "suggest": {
+        "illuminate/support": "Required for Laravel support"
+    },
+    "minimum-stability": "stable"
+}

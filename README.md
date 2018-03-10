@@ -1,10 +1,9 @@
 # Laravel 5 TeamworkDesk PM API Bridge
 
-![teamwork-graphic](https://cloud.githubusercontent.com/assets/2628905/7765016/853f462c-001e-11e5-90ac-389bf1a6c2fe.jpg)
 
-[![Build Status](https://travis-ci.org/nigelheap/teamwork.svg?branch=master)](https://travis-ci.org/nigelheap/teamwork)
-![Release](https://img.shields.io/github/release/nigelheap/teamwork.svg?style=flat)
-![License](https://img.shields.io/packagist/l/nigelheap/teamwork.svg?style=flat)
+[![Build Status](https://travis-ci.org/nigelheap/teamwork-desk.svg?branch=master)](https://travis-ci.org/nigelheap/teamwork)
+![Release](https://img.shields.io/github/release/nigelheap/teamwork-desk.svg?style=flat)
+![License](https://img.shields.io/packagist/l/nigelheap/teamwork-desk.svg?style=flat)
 
 This is a simple PHP Client that can connect to the [TeamworkDesk](http://www.teamwork.com) API. This package was developed to be used with [Laravel 5](http://www.laravel.com) but can also be used stand alone as well. I hope this helps you automate and extend TeamworkDesk to integrate even more into your business! Have fun and good luck. :metal:
 

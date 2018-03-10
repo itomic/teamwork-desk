@@ -121,6 +121,7 @@ $teamwork->project($projectID)->activity();
 - [X] Add Support For `Tickets`
 - [X] Add Support For `Inboxes`
 - [X] Add Support For `Customers`
+- [X] Add Support For `Users`
 
 #### 1.1 Release
 

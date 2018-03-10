@@ -93,14 +93,25 @@ You are ready to go now!
 
 ## Examples
 
-Not all of the TeamworkDesk API is supported yet but there is still a lot you can do! Below are some examples of how you can access Projects, Companies, and more. To work with a specific Object pass in the ID to perform actions on it. Data can be passed through for creating and editing.
-
-**To see more examples [visit the docs](http://nigelheap.github.io/teamwork-desk/)**
-
 ```php
-
-// get the latest activity on a project
+// get a customer
 $teamwork->customers($customerId)->find();
+```
+```php
+// get a customers
+$teamwork->customers()->all();
+```
+```php
+// get a tickets
+$teamwork->tickets()->all();
+```
+```php
+// get a ticket
+$teamwork->tickets($ticketId)->find();
+```
+```php
+// get a users
+$teamwork->users()->all();
 ```
 
 ## Roadmap

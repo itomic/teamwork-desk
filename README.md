@@ -61,7 +61,7 @@ If you are using Laravel then add a `teamwork` array to your `config/services.ph
 If you are using the Facade with Laravel youc an easily access TeamworkDesk like this
 
 ```php
-TeamworkDesk::people()->all();
+TeamworkDesk::customers()->all();
 ```
 
 If you want to use dependency injection to make your application easy to test the Service Provider binds `NigelHeap\TeamworkDesk\Factory`. Here is an example of how to use it with dependency injection

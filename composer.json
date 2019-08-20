@@ -1,5 +1,5 @@
 {
-    "name": "nigelheap/teamwork-desk",
+    "name": "itomic/teamwork-desk",
     "description": "PHP wrapper for the Teamwork desk API",
     "keywords": ["teamwork", "api", "laravel", "teamwork desk"],
     "license": "MIT",

@@ -34,7 +34,7 @@ class Tickets extends AbstractObject {
             'sortDir',
         ]);
 
-        return $this->client->get("$this->endpoint/search", $args)->response();
+        return $this->client->get("search/$this->endpoint", $args)->response();
     }
 
     /**

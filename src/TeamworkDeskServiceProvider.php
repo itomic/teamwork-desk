@@ -17,7 +17,7 @@ class TeamworkDeskServiceProvider extends ServiceProvider {
             $client = new \NigelHeap\TeamworkDesk\Client(new Guzzle,
                 $app['config']->get('services.teamwork-desk.key'),
                 $app['config']->get('services.teamwork-desk.url'),
-                $app['config']->get('services.teamwork-desk.version', 'v1')
+                $app['config']->get('services.teamwork-desk.version', 'v2')
             );
 
             return new \NigelHeap\TeamworkDesk\Factory($client);

@@ -143,9 +143,13 @@ class Client implements RequestableInterface {
     public function buildRequest($endpoint, $action, $params = [], $query = null)
     {
 
-        $options = [
-            'auth' => [$this->key, 'X'],
-        ];
+        $options = [];
+
+        if(str_contains($this->version, 'v2')){
+            $options['headers']['Authorization'] = 'Bearer ' . $this->key;
+        } else {
+            $options['auth'] = [$this->key, 'X'];
+        }
 
         if (count($params) > 0)
         {
@@ -206,7 +210,13 @@ class Client implements RequestableInterface {
             $this->url = $this->url . '/';
         }
 
-        return $this->url . 'desk/' . $this->version . '/' . $endpoint . '.' . $this->dataFormat;
+        if($this->version === 'v2'){
+            $version = 'api/' . $this->version;
+        } else {
+            $version = $this->version;
+        }
+
+        return $this->url . 'desk/' . $version . '/' . $endpoint . '.' . $this->dataFormat;
     }
 
     /**

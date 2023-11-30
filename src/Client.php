@@ -161,11 +161,24 @@ class Client implements RequestableInterface {
             $options['query'] = $query;
         }
 
-        $this->request = $this->client->request(
-            $action,
-            $this->buildUrl($endpoint),
-            $options
-        );
+        try {
+            $this->request = $this->client->request(
+                $action,
+                $this->buildUrl($endpoint),
+                $options
+            );
+
+        } catch (\Throwable $e) {
+
+            dd([
+                $action,
+                $this->buildUrl($endpoint),
+                $options,
+                $e->getMessage()
+            ]);
+
+        }
+
 
 
         return $this;
